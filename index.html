@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="zh-cn">
 
 <head>
 	<title>51chifun - 个人主页</title>
@@ -15,14 +10,21 @@
 	<meta name='keywords' content='51chifun,个人主页'>
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>/* 强制覆盖可能的冲突样式 */
+	<link rel="preconnect" href="https://www.51chifun.de" crossorigin />
+	<link rel="preload" as="style" href="assets/css/main.css" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webfonts/fa-solid-900.woff2" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webfonts/fa-regular-400.woff2" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webfonts/fa-brands-400.woff2" />
+	<link rel="preload" as="image" href="assets/css/images/bg.webp" fetchpriority="high" />
+	<link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all';document.getElementById('wrapper').style.opacity='1'" />
+	<link rel="stylesheet" href="assets/css/all.min.css" media="print" onload="this.media='all'" />
+	<noscript><link rel="stylesheet" href="assets/css/main.css" /><link rel="stylesheet" href="assets/css/all.min.css" /></noscript>
+	<style>
+		#wrapper { opacity: 0; transition: opacity 0.3s ease; }
 			[class^="fa-"], [class*=" fa-"]::before {
 				font-family: "Font Awesome 5 Brands", "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Brands", "Font Awesome 6 Pro", "Font Awesome 6 Free", sans-serif !important;
 				font-weight: 900 !important;
 			}
-
-			/* 叠层遮罩 */
 			.modal-overlay {
 				position: fixed;
 				top: 0;
@@ -43,8 +45,6 @@
 				opacity: 1;
 				visibility: visible;
 			}
-
-			/* 毛玻璃卡片 */
 			.glass-card {
 				width: 240px;
 				height: 360px;
@@ -104,8 +104,6 @@
 				);
 				pointer-events: none;
 			}
-
-			/* 右上角叉子关闭按钮 */
 			.glass-close-btn {
 				position: absolute;
 				top: 12px;
@@ -126,8 +124,6 @@
 				line-height: 1;
 				padding: 0;
 			}
-
-			/* 悬停在关闭按钮上面则区域显示#5CA0FE */
 			.glass-close-btn:hover {
 				background: #5CA0FE !important;
 				color: #ffffff !important;
@@ -178,9 +174,6 @@
 				margin-bottom: 10px;
 			}
 	</style>
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
 </head>
 
 <body class="is-preload">
@@ -206,7 +199,6 @@
 		</div>
 	</div>
 
-	<!-- 个人主页面上的毛玻璃叠层卡片 -->
 	<div id="about-modal" class="modal-overlay">
 		<div class="glass-card">
 			<button class="glass-close-btn" id="modal-close-btn" title="关闭">
@@ -230,7 +222,12 @@
 		window.ontouchmove = function () { return false; }
 		window.onorientationchange = function () { document.body.scrollTop = 0; }
 
-		// 关于弹窗叠层控制
+		// Defer unused Font Awesome CSS
+		setTimeout(function() {
+			var faCss = document.querySelector('link[href="assets/css/all.min.css"]');
+			if (faCss) faCss.media = 'all';
+		}, 2000);
+
 		const modal = document.getElementById('about-modal');
 		const openBtn = document.getElementById('btn-about');
 		const closeBtn = document.getElementById('modal-close-btn');
@@ -259,9 +256,7 @@
 			});
 		}
 	</script>
-	<!-- 引起火狐白屏/重置的罪魁祸首：disable-devtool 在 Firefox 下存在误报，会执行 window.open("", "_self") 导致页面变为空白 -->
-	<!-- <script disable-devtool-auto src='http://fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'
-		disable-menu='false'></script> -->
+	
 </body>
 
 </html>
