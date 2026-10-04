@@ -12,15 +12,13 @@
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="preconnect" href="https://www.51chifun.de" crossorigin />
 	<link rel="preload" as="style" href="assets/css/main.css" />
-<link rel="preload" as="font" type="font/ttf" crossorigin href="assets/fonts/Comfortaa.ttf" />
-	<link rel="preload" as="font" type="font/ttf" crossorigin href="assets/fonts/细体.ttf" />
-	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-solid-900.woff2" />
-	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-regular-400.woff2" />
-	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/main.woff2" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-solid-sub.woff2" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-brands-sub.woff2" />
 	<link rel="preload" as="image" href="assets/css/images/bg.webp" fetchpriority="high" />
 	<link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all';document.getElementById('wrapper').style.opacity='1'" />
-	<link rel="stylesheet" href="assets/css/all.min.css" media="print" onload="this.media='all'" />
-	<noscript><link rel="stylesheet" href="assets/css/main.css" /><link rel="stylesheet" href="assets/css/all.min.css" /></noscript>
+	<link rel="stylesheet" href="assets/css/icons.css" />
+	<noscript><link rel="stylesheet" href="assets/css/main.css" /><link rel="stylesheet" href="assets/css/icons.css" /></noscript>
 	<style>
 		#wrapper { opacity: 0; transition: opacity 0.3s ease; }
 			[class^="fa-"], [class*=" fa-"]::before {
@@ -265,12 +263,6 @@
 		window.onload = function () { document.body.classList.remove('is-preload'); }
 		window.ontouchmove = function () { return false; }
 		window.onorientationchange = function () { document.body.scrollTop = 0; }
-
-		// Defer unused Font Awesome CSS
-		setTimeout(function() {
-			var faCss = document.querySelector('link[href="assets/css/all.min.css"]');
-			if (faCss) faCss.media = 'all';
-		}, 2000);
 
 		const modal = document.getElementById('about-modal');
 		const openBtn = document.getElementById('btn-about');
