@@ -10,21 +10,18 @@
 	<meta name='keywords' content='51chifun,个人主页'>
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-	<link rel="preconnect" href="https://www.51chifun.de" crossorigin />
+	<link rel="preconnect" href="https://fonts.loli.net" />
+	<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+	<link href="https://fonts.loli.net/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
 	<link rel="preload" as="style" href="assets/css/main.css" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/main.woff2" />
-	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-solid-sub.woff2" />
-	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-brands-sub.woff2" />
-	<link rel="preload" as="image" href="assets/css/images/bg.webp" fetchpriority="high" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-solid-900.woff2" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/webicon/fa-brands-400.woff2" />
+	<link rel="preload" as="image" type="image/avif" href="assets/css/images/bg.avif" fetchpriority="high" />
 	<link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all';document.getElementById('wrapper').style.opacity='1'" />
 	<link rel="stylesheet" href="assets/css/icons.css" />
 	<noscript><link rel="stylesheet" href="assets/css/main.css" /><link rel="stylesheet" href="assets/css/icons.css" /></noscript>
 	<style>
 		#wrapper { opacity: 0; transition: opacity 0.3s ease; }
-			[class^="fa-"], [class*=" fa-"]::before {
-				font-family: "Font Awesome 5 Brands", "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Brands", "Font Awesome 6 Pro", "Font Awesome 6 Free", sans-serif !important;
-				font-weight: 900 !important;
-			}
 			.modal-overlay {
 				position: fixed;
 				top: 0;
@@ -174,7 +171,6 @@
 				margin-bottom: 10px;
 			}
 
-			/* 浏览器不受支持 提示层（由全效果特性检测触发） */
 			.un-br {
 				position: fixed;
 				top: 0;
@@ -224,16 +220,15 @@
 		<div id="overlay"></div>
 		<div id="main">
 
-			<!-- Header -->
 			<header id="header">
 				<h1>51chifun.</h1>
 				<p>&nbsp;&bull;&nbsp; 我的个人主页 &nbsp;&bull;&nbsp; 建议收藏 &nbsp;&bull;&nbsp; 一个初中生 &nbsp;&bull;&nbsp;</p>
 				<nav>
 					<ul>
-						<li><a href="https://blog.51chifun.de/" target="_blank" rel="noopener" class="icon fa-solid fa-blog" data-tooltip="博客"><span class="label">博客</span></a></li>
+						<li><a href="https://blog.51chifun.de/" target="_blank" rel="noopener" class="icon fa-solid fa-blog" data-tooltip="Blog"><span class="label">博客</span></a></li>
 						<li><a href="https://github.com/51chifun" target="_blank" rel="noopener" class="icon fa-brands fa-github" data-tooltip="GitHub"><span class="label">github</span></a></li>
-						<li><a href="mailto:blog51chifun@icloud.com" class="icon fa-solid fa-envelope" data-tooltip="给我发邮件"><span class="label">Email</span></a></li>
-						<li><a href="javascript:void(0);" id="btn-about" class="icon fa-solid fa-info" data-tooltip="关于"><span class="label">关于</span></a></li>
+						<li><a href="mailto:blog51chifun@icloud.com" class="icon fa-solid fa-envelope" data-tooltip="Email"><span class="label">Email</span></a></li>
+						<li><a href="javascript:void(0);" id="btn-about" class="icon fa-solid fa-info" data-tooltip="About"><span class="label">关于</span></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -243,12 +238,12 @@
 
 	<div id="about-modal" class="modal-overlay">
 		<div class="glass-card">
-			<button class="glass-close-btn" id="modal-close-btn" title="关闭">
+			<button class="glass-close-btn" id="modal-close-btn" title="Close">
 				<i class="fa-solid fa-xmark"></i>
 			</button>
 			<div class="glass-card-header">
 				<i class="fa-solid fa-circle-info"></i>
-				<h3>关于</h3>
+				<h3>About</h3>
 			</div>
 			<div class="glass-card-body">
 				<span class="glass-badge">51chifun</span>
@@ -293,7 +288,6 @@
 		}
 	</script>
 
-	<!-- 浏览器合格性检测（与博客同一段 UA 正则，仅把版本门槛改成“全效果”线） -->
 	<script type="text/javascript">
 		!new RegExp("/Edge?\\/(8[4-9]|9\\d|\\d{3,})\\.\\d+(\\.\\d+|)|Firefox\\/(10[3-9]|1[1-9]\\d|[2-9]\\d{2}|\\d{4,})\\.\\d+(\\.\\d+|)|Chrom(ium|e)\\/(8[4-9]|9\\d|\\d{3,})\\.\\d+(\\.\\d+|)([\\d.]+$|.*Safari\\/(?![\\d.]+ Edge\\/[\\d.]+$))|(Maci|X1{2}).+ Version\\/(14\\.[1-9]\\d*|1[5-9]|[2-9]\\d|\\d{3,})(\\.\\d+|)([,.]\\d+|)( \\(\\w+\\)|)( Mobile\\/\\w+|) Safari\\/|Chrome.+OPR\\/(7[0-9]|[89]\\d|\\d{3,})\\.\\d+\\.\\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(1[4-9]|[2-9]\\d|\\d{3,})[._]\\d+([._]\\d+|)|Android:?[ /-](14[89]|1[5-9]\\d|[2-9]\\d{2}|\\d{4,})(\\.\\d+|)(\\.\\d+|)|Mobile Safari.+OPR\\/([89]\\d|\\d{3,})\\.\\d+\\.\\d+|Android.+Firefox\\/(15\\d|1[6-9]\\d|[2-9]\\d{2}|\\d{4,})\\.\\d+(\\.\\d+|)|Android.+Chrom(ium|e)\\/(14[89]|1[5-9]\\d|[2-9]\\d{2}|\\d{4,})\\.\\d+(\\.\\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(1[5-9]|[2-9]\\d|\\d{3,})\\.\\d+\\.\\d+|SamsungBrowser\\/(1[4-9]|[2-9]\\d|\\d{3,})\\.\\d+|Android.+MQ{2}Browser\\/(1[4-9]|[2-9]\\d|\\d{3,})(\\.\\d+|)(\\.\\d+|)|baidubrowser[\\s/](1[3-9]|[2-9]\\d|\\d{3,})(\\.\\d+|)(\\.\\d+|)|K[Aa][Ii]OS\\/([3-9]|\\d{2,})\\.\\d+(\\d+\\.\\d+|)/").test(navigator.userAgent) && (document.body.innerHTML += '<div class="un-br"><h1 class="un-br_sf">{ ᗜ˰ᗜ }</h1> <h1>浏览器不受支持</h1><p>您当前使用的浏览器不受支持，请更新你的浏览器。</p></div>')
 	</script>
@@ -301,6 +295,3 @@
 </body>
 
 </html>
-
-
-

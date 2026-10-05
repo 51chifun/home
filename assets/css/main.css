@@ -1,20 +1,4 @@
-/* 合并字体：GB2312 常用字(6,763 汉字) + 全部标点 + Comfortaa 拉丁字形，去掉日文/韩文，woff2 压缩 */
-@font-face {
-	font-family: 'Homepage';
-	src: url('../fonts/main.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900"); */
 @import url("icons.css");
-
-/*
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -81,8 +65,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Basic */
-
 	html {
 		box-sizing: border-box;
 	}
@@ -109,7 +91,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #fff;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Homepage", sans-serif;
+		font-family: "Comfortaa", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
 		font-size: 15pt;
 		font-weight: 400;
 		letter-spacing: -0.025em;
@@ -131,43 +113,14 @@ input, select, textarea {
 			border-color: transparent;
 		}
 
-/* Icon */
-
 	.icon {
 		text-decoration: none;
 		position: relative;
 	}
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 6 Pro';
-			font-weight: 400;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 6 Brands';
-		}
-
-		.icon.duotone:before {
-			font-family: 'Font Awesome 6 Duotone';
-		}
-
-/* Wrapper */
+	.icon > .label {
+		display: none;
+	}
 
 	@-moz-keyframes wrapper {
 		0% {
@@ -223,8 +176,6 @@ input, select, textarea {
 		width: 100%;
 	}
 
-/* BG */
-
 	#bg {
 		-moz-animation: bg 60s linear infinite;
 		-webkit-animation: bg 60s linear infinite;
@@ -238,9 +189,8 @@ input, select, textarea {
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
-	/* Set your background with this */
 
-		background: #348cb2 url("images/bg.webp") bottom left;
+		background: #348cb2 url("images/bg.avif") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
@@ -294,8 +244,6 @@ input, select, textarea {
 		width: 100%;
 	}
 
-/* Overlay */
-
 	@-moz-keyframes overlay {
 		0% {
 			opacity: 0;
@@ -342,7 +290,7 @@ input, select, textarea {
 		-ms-animation: overlay 1.5s 1.5s forwards;
 		animation: overlay 1.5s 1.5s forwards;
 		background-attachment: fixed, fixed;
-		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+		background-image: url("images/overlay-pattern.avif"), url("images/overlay.svg");
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
@@ -353,8 +301,6 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 	}
-
-/* Main */
 
 	#main {
 		height: 100%;
@@ -374,8 +320,6 @@ input, select, textarea {
 			vertical-align: middle;
 			width: 1px;
 		}
-
-/* Header */
 
 	@-moz-keyframes header {
 		0% {
@@ -657,7 +601,7 @@ input, select, textarea {
 	}
 
 		#header h1 {
-			font-family: "Homepage", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+			font-family: "Comfortaa", system-ui, sans-serif;
 			font-size: 4.35em;
 			font-weight: 900;
 			letter-spacing: -0.01em;
@@ -770,7 +714,7 @@ input, select, textarea {
 
 			#header nav a::after {
 				content: attr(data-tooltip);
-				font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Homepage", sans-serif;
+				font-family: "Comfortaa", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
 				position: absolute;
 				bottom: 130%;
 				left: 50%;
@@ -845,8 +789,6 @@ input, select, textarea {
 					display: none;
 				}
 
-/* Footer */
-
 	#footer {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
@@ -862,17 +804,11 @@ input, select, textarea {
 		width: 100%;
 	}
 
-/* Wide */
-
 	@media screen and (max-width: 1680px) {
-
-		/* Basic */
 
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
-
-		/* BG */
 
 			@-moz-keyframes bg {
 				0% {
@@ -919,17 +855,11 @@ input, select, textarea {
 			background-size: 750px auto;
 		} }
 
-/* Normal */
-
 	@media screen and (max-width: 1280px) {
-
-		/* Basic */
 
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
-
-		/* BG */
 
 			@-moz-keyframes bg {
 				0% {
@@ -976,11 +906,7 @@ input, select, textarea {
 			background-size: 375px auto;
 		} }
 
-/* Mobile */
-
 	@media screen and (max-width: 736px) {
-
-		/* Basic */
 
 			body {
 				min-width: 320px;
@@ -989,8 +915,6 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 11pt;
 			}
-
-		/* BG */
 
 			@-moz-keyframes bg {
 				0% {
@@ -1037,8 +961,6 @@ input, select, textarea {
 			background-size: 150px auto;
 		}
 
-	/* Header */
-
 		#header h1 {
 			font-size: 2.5em;
 		}
@@ -1059,11 +981,7 @@ input, select, textarea {
 				font-size: 1em;
 			} }
 
-/* Mobile (Portrait) */
-
 	@media screen and (max-width: 480px) {
-
-		/* BG */
 
 			@-moz-keyframes bg {
 				0% {
@@ -1109,8 +1027,6 @@ input, select, textarea {
 		#bg {
 			background-size: 206.25px auto;
 		}
-
-	/* Header */
 
 		#header nav {
 			padding: 0 1em;
