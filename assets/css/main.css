@@ -924,7 +924,7 @@ input, select, textarea {
 				}
 
 				100% {
-					background-position: -150px bottom;
+					background-position: -600px bottom;
 				}
 
 	}
@@ -935,7 +935,7 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -150px bottom;
+				background-position: -600px bottom;
 			}
 			}
 
@@ -945,7 +945,7 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -150px bottom;
+				background-position: -600px bottom;
 			}
 		}
 
@@ -955,12 +955,19 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -150px bottom;
+				background-position: -600px bottom;
 			}
 		}
 
 		#bg {
-			background-size: 150px auto;
+			background-size: 600px auto;
+			width: 1500px;
+		}
+
+		@supports (height: 100dvh) {
+			#bg, #overlay, #main {
+				height: 100dvh;
+			}
 		}
 
 		#header h1 {
@@ -991,7 +998,7 @@ input, select, textarea {
 				}
 
 				100% {
-					background-position: -206.25px bottom;
+					background-position: -500px bottom;
 				}
 
 	}
@@ -1002,7 +1009,7 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -206.25px bottom;
+				background-position: -500px bottom;
 			}
 			}
 
@@ -1012,7 +1019,7 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -206.25px bottom;
+				background-position: -500px bottom;
 			}
 		}
 
@@ -1022,12 +1029,12 @@ input, select, textarea {
 			}
 
 			100% {
-				background-position: -206.25px bottom;
+				background-position: -500px bottom;
 			}
 		}
 
 		#bg {
-			background-size: 206.25px auto;
+			background-size: 500px auto;
 		}
 
 		#header nav {
